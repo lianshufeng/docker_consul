@@ -2,10 +2,10 @@ version: "3"
 
 services:
   consul:
-    image: consul
+    image: lianshufeng/consul
     ports:
       - "8500:8500"
-    container_name: lianshufeng/consul
+    container_name: consul
     restart: always
     command: "consul agent -dev"
 
