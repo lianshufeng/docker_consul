@@ -7,8 +7,9 @@ services:
       - "8500:8500"
     container_name: consul
     restart: always
-    command: "consul agent -dev"
-
+    command: "consul agent -client 0.0.0.0"
+    # command: "consul agent -dev -client 0.0.0.0"
+    
 # firewall-cmd --add-port=8500/tcp --permanent ; firewall-cmd --reload
 # docker-compose down ; docker build ./ -t lianshufeng/consul ; docker-compose up 
 
