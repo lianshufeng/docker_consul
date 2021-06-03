@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  consul:
+    image: consul
+    ports:
+      - "8500:8500"
+    container_name: lianshufeng/consul
+    restart: always
+    command: "consul agent -dev"
+
+# firewall-cmd --add-port=8500/tcp --permanent ; firewall-cmd --reload
+# docker-compose down ; docker build ./ -t lianshufeng/consul ; docker-compose up 
+
